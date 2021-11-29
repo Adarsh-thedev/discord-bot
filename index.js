@@ -10,12 +10,14 @@ client.login(process.env.TOKEN);
 
 client.once("ready", () => {
   console.log(`${client.user.username} has logged In`);
-
-  //   console.log(client);
 });
 
 client.on("messageCreate", (message) => {
-  console.log(message.content);
+  if (message.author.bot) return;
+
+  if (message.content === "hello") {
+    message.reply(`${message.author.username} Hello from the bot!`);
+  }
 });
 
 const app = express();
