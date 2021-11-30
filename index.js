@@ -16,7 +16,7 @@ client.on("messageCreate", (message) => {
   if (message.author.bot) return;
 
   if (message.content === "hello") {
-    message.reply(`${message.author.username} Hello from the bot!`);
+    message.reply(`${message.author} Hello from the bot!`);
   }
 });
 
