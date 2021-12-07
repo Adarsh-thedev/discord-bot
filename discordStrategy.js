@@ -11,8 +11,8 @@ const oauth = new DiscordOauth2({
 passport.use(
   new DiscordStrategy(
     {
-      clientID: "917363335639478292",
-      clientSecret: "N-N21W3ibWZRaPAcV7Wse6MmshWiJtU9",
+      clientID: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
       callbackURL: "/auth/redirect",
       scope,
     },
@@ -38,9 +38,8 @@ passport.use(
       oauth
         .addMember({
           accessToken: a,
-          botToken:
-            "OTE3MzYzMzM1NjM5NDc4Mjky.Ya3nLw.9jTlpmeADmGreAUKj3Y3z9QXqQs",
-          guildId: "914807760988811274",
+          botToken: process.env.BOT_TOKEN,
+          guildId: process.env.GUILD_ID,
           userId: p.id,
           roles: ["917384340445470750"],
         })
