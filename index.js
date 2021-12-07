@@ -20,7 +20,7 @@ app.get(
     failureRedirect: "/",
   }),
   async (req, res) => {
-    return res.json();
+    return res.redirect("/");
   }
 );
 
