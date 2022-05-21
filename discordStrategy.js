@@ -25,7 +25,7 @@ passport.use(
           roles: ["917384340445470750"],
         })
         .then((data) => {
-          console.log(data);
+          console.log(data, a);
           return data;
         })
         .catch((err) => {
