@@ -6,6 +6,8 @@ const DiscordStrategy = require("./discordStrategy");
 
 const app = express();
 
+const port = process.env.PORT || 8000;
+
 app.use(cors());
 app.use(passport.initialize());
 
@@ -24,4 +26,5 @@ app.get(
   }
 );
 
-app.listen(8000, () => console.info("App is listening on port 8000"));
+app.listen(port, () => console.info(`App is listening on port ${port}`));
+
